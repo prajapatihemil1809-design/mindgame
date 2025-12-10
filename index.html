@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>MindMaster: Tricky Puzzles</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      /* Disable pull-to-refresh on mobile */
+      body {
+        overscroll-behavior-y: contain;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Nunito', sans-serif;
+      }
+      
+      /* Custom Cartoon Shadow for buttons */
+      .btn-depth {
+        transition: all 0.1s;
+      }
+      .btn-depth:active {
+        transform: translateY(4px);
+        box-shadow: none;
+        border-bottom-width: 0px;
+        margin-top: 4px;
+      }
+
+      @keyframes drive {
+        0% { left: -20%; }
+        100% { left: 120%; }
+      }
+      .animate-drive {
+        animation: drive 3s linear infinite;
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translate(-50%, 20px); }
+        to { opacity: 1; transform: translate(-50%, 0); }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.3s ease-out forwards;
+      }
+      
+      @keyframes popIn {
+        0% { transform: scale(0.5); opacity: 0; }
+        80% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      .animate-pop {
+        animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-[#FFF9E6] text-[#4A3B32] h-screen w-screen overflow-hidden">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>
